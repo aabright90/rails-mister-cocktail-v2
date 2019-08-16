@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <h5 class="card-title"><%= @cocktail.name %></h5>
+      <% @cocktail.doses.each do |dose| %>
+      <p class="card-text"><%= dose.description %></p>
+      <p> <%= dose.ingredient.name %> <%= link_to  cocktail_dose_path(@cocktail, dose),
+      method: :delete,
+      data: { confirm: "Are you sure?" } do %>
+        <i class="fas fa-minus-square"></i>
+        <% end %>
+      </p>
+      <% end %>
+      <p> <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary w-100" %></p>
+      <p><%= link_to 'Return to cocktails index', cocktails_path(@cocktail), class: "btn btn-primary w-100" %></p>
+    </div>
+  </div>
+</div>

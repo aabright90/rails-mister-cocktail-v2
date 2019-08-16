@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    <i class="fas fa-cocktail"></i> Mr. Cocktail
+    <%= link_to 'Create a new Cocktail',  new_cocktail_path, class: "btn btn-primary" %>
+  </a>
+</nav>
+
+<body>
+  <div class="container center-content">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+       <div class="d-flex justify-content-between">
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1562184167-2b35a31ab178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <h4><%= link_to "Go to this Cocktail", cocktail_path(cocktail), class: "btn btn-primary w-100" %></h4>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</body>

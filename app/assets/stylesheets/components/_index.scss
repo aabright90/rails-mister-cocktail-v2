@@ -1,0 +1,41 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "navbar";
+@import "card";
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+body {
+  background-color: #c82121;
+}
+
+.row {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
