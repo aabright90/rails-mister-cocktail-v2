@@ -1,0 +1,13 @@
+<%= simple_form_for @cocktail do |f| %>
+<%= f.label :name, 'Create a Cocktail'  %>
+<%= f.text_field :name, class: 'form-control' %>
+<br>
+<%= f.submit class: 'btn btn-light w-100' %>
+<br>
+<br>
+<%= link_to 'Return to Cocktails', cocktails_path, class: 'btn btn-light w-100' %>
+<br>
+<%= f.input :photo %>
+<%= f.input :photo_cache, as: :hidden %>
+<% end %>
+
